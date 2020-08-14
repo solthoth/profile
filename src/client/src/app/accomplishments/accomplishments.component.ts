@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfileService } from '../service/profile.service';
 
 @Component({
   selector: 'app-accomplishments',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccomplishmentsComponent implements OnInit {
 
-  constructor() { }
+  accomplishments: string[];
+
+  constructor(private profileService: ProfileService) {
+    this.getAccomplishments();
+  }
 
   ngOnInit(): void {
   }
 
+  getAccomplishments(): void {
+    this.profileService.getAccomplishments()
+      .subscribe(a => this.accomplishments = a);
+  }
 }
