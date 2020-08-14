@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { JobComponent } from './job/job.component';
+import { JobsComponent } from './jobs/jobs.component';
+import { AccomplishmentsComponent } from './accomplishments/accomplishments.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JobComponent
+    JobsComponent,
+    AccomplishmentsComponent
   ],
   imports: [
     BrowserModule,

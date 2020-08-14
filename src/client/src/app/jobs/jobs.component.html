@@ -1,0 +1,17 @@
+<div class="card-group">
+    <div *ngFor="let job of jobs" class="card">
+        <!--<img src="{{job.image}}" class="card-img-top" alt="{{job.company}}">-->
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap">
+            <title>{{job.company}}</title>
+            <rect width="100%" height="100%" fill="#868e96"></rect>
+            <text x="50%" y="50%" fill="#dee2e6" dy=".3em">{{job.company}}</text>
+        </svg>
+        <div class="card-body">
+            <h5 class="card-title">{{job.title}}: {{job.company}}</h5>
+            <p class="card-text">{{job.content}}</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Start: {{job.startDate | date:'yyyy-MM'}} / End: {{job.endDate | date:'yyyy-MM'}}</small>
+        </div>
+    </div>
+</div>
