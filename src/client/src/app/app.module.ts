@@ -7,12 +7,18 @@ import { environment } from '../environments/environment';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { JobsComponent } from './jobs/jobs.component';
 import { AccomplishmentsComponent } from './accomplishments/accomplishments.component';
+import { ObjectiveComponent } from './objective/objective.component';
+import { SkillsComponent } from './skills/skills.component';
+import { SmallViewComponent } from './small-view/small-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     JobsComponent,
-    AccomplishmentsComponent
+    AccomplishmentsComponent,
+    ObjectiveComponent,
+    SkillsComponent,
+    SmallViewComponent
   ],
   imports: [
     BrowserModule,

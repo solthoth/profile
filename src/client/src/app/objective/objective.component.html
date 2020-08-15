@@ -1,0 +1,8 @@
+<div class="jumbotron p-4 -p-md-5 text-white rounded bg-primary">
+    <h1 class="display-4 font-italic">Hello, world!</h1>
+    <p class="lead my-3">Welcome to my profile! My name is {{fullName}}</p>
+    <p *ngFor="let objective of objectives">{{objective}}</p>
+    <p class="lead mb-0">
+        <a class="text-white font-weight-bold" href="{{profile.linkedInUrl}}" role="button">Add me on LinkedIn!</a>
+    </p>
+</div>
