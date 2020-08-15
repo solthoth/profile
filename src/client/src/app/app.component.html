@@ -178,7 +178,13 @@
     </div>
     <aside class="col-md-4 blog-sidebar">
       <div class="p-4 mb-3 bg-light rounded">
-        <app-skills></app-skills>
+        <app-small-view [info]="skills"></app-small-view>
+      </div>
+      <div class="p-4 mb-3 bg-light rounded">
+        <app-small-view [info]="education"></app-small-view>
+      </div>
+      <div class="p-4 mb-3 bg-light rounded">
+        <app-small-view [info]="hobbies"></app-small-view>
       </div>
     </aside>
   </div>

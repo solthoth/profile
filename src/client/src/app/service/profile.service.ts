@@ -39,4 +39,12 @@ export class ProfileService {
   public getEducations(): Observable<Information> {
     return of({} as Information);
   }
+
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error); 
+      console.error(`${operation} failed: ${error.message}`);
+      return of(result as T);
+    };
+  }
 }
