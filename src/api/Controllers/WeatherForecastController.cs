@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace api.Controllers
 {
-  [ApiController]
+    [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
