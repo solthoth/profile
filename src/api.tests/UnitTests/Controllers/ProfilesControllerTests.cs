@@ -25,9 +25,10 @@ namespace api.tests.UnitTests.Controllers
     [Test]
     public async Task Given_Nothing_When_Getting_Profiles_Then_Returns_ProfileCollection()
     {
+      profileContext.Get().ReturnsForAnyArgs(new List<Profile>());
       var users = await sut.Get();
 
-      users.Should().BeAssignableTo<IEnumerable<Profile>>();
+      users.Should().BeOfType<List<Profile>>();
     }
 
     [Test]

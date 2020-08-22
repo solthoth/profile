@@ -13,3 +13,14 @@ services:
       dockerfile: ../../support/Dockerfile.api
     ports:
       - 8888:80
+  mongo:
+    image: mongo:4.4.0
+    restart: always
+    ports: 
+      - 27017-27019:27017-27019
+    volumes: 
+      - ./support/mongo:/docker-entrypoint-initdb.d/
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: S@Str0ng!
+      MONGO_INITDB_DATABASE: resume

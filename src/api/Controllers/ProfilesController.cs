@@ -17,12 +17,13 @@ namespace api.Controllers
     }
 
     [HttpGet]
-    public Task<IEnumerable<Profile>> Get()
+    public Task<List<Profile>> Get()
     {
       return profileContext.Get();
     }
 
     [HttpGet]
+    [Route("{id:int}")]
     public Task<Profile> Get(string id)
     {
       return profileContext.Get(id);
